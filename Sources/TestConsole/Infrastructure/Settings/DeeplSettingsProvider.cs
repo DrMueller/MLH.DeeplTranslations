@@ -19,7 +19,7 @@ namespace Mmu.Mlh.DeeplTranslations.TestConsole.Infrastructure.Settings
                 "AppSettings",
                 environmentName,
                 typeof(DeeplSettingsProvider).Assembly.GetBasePath(),
-                "Apps/DeeplProxy");
+                "Apps/DeeplTranslations");
 
             Settings = settingsFactory.CreateSettings<DeeplSettingsDto>(config);
         }
