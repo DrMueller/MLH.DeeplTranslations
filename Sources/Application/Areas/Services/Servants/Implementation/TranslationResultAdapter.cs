@@ -23,8 +23,8 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Services.Servants.Implementation
                 request.IgnoreMarkup.Evaluate(
                     markup =>
                     {
-                        text = text.Replace(IgnoreForTranslationMarkup.DeeplIgnoreBeginTag, markup.CustomBeginTag);
-                        text = text.Replace(IgnoreForTranslationMarkup.DeeplIgnoreEndTag, markup.CustomEndTag);
+                        text = text.Replace(IgnoreForTranslationMarkup.DeeplIgnoreBeginTag, markup.BeginTag);
+                        text = text.Replace(IgnoreForTranslationMarkup.DeeplIgnoreEndTag, markup.EndTag);
                     });
 
                 var identifiableText = new TextPart(textKey, text);

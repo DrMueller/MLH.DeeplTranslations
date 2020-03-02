@@ -4,19 +4,19 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Models.Requests
 {
     public class IgnoreForTranslationMarkup
     {
-        public const string DeeplIgnoreTag = "x";
-        public static readonly string DeeplIgnoreBeginTag = $"<{DeeplIgnoreTag}>";
-        public static readonly string DeeplIgnoreEndTag = $"</{DeeplIgnoreTag}>";
-        public string CustomBeginTag { get; }
-        public string CustomEndTag { get; }
+        internal const string DeeplIgnoreTag = "x";
+        internal static readonly string DeeplIgnoreBeginTag = $"<{DeeplIgnoreTag}>";
+        internal static readonly string DeeplIgnoreEndTag = $"</{DeeplIgnoreTag}>";
+        public string BeginTag { get; }
+        public string EndTag { get; }
 
-        public IgnoreForTranslationMarkup(string customBeginTag, string customEndTag)
+        public IgnoreForTranslationMarkup(string beginTag, string endTag)
         {
-            Guard.StringNotNullOrEmpty(() => customBeginTag);
-            Guard.StringNotNullOrEmpty(() => customEndTag);
+            Guard.StringNotNullOrEmpty(() => beginTag);
+            Guard.StringNotNullOrEmpty(() => endTag);
 
-            CustomBeginTag = customBeginTag;
-            CustomEndTag = customEndTag;
+            BeginTag = beginTag;
+            EndTag = endTag;
         }
     }
 }

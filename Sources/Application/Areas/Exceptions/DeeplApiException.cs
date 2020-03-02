@@ -4,23 +4,23 @@ using System.Runtime.Serialization;
 namespace Mmu.Mlh.DeeplTranslations.Areas.Exceptions
 {
     [Serializable]
-    public class DeeplTranslationException : Exception
+    public class DeeplApiException : Exception
     {
-        public DeeplTranslationException()
+        public DeeplApiException()
         {
         }
 
-        public DeeplTranslationException(string message)
+        public DeeplApiException(string message)
             : base(message)
         {
         }
 
-        public DeeplTranslationException(string message, Exception innerException)
+        public DeeplApiException(string message, Exception innerException)
             : base(message, innerException)
         {
         }
 
-        protected DeeplTranslationException(SerializationInfo info, StreamingContext context)
+        protected DeeplApiException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }

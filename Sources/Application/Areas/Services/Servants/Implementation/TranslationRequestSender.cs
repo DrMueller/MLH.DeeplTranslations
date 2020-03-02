@@ -71,8 +71,8 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Services.Servants.Implementation
                 {
                     var textToSend = request.IgnoreMarkup.Evaluate(
                         markup => tp.Text
-                            .Replace(markup.CustomEndTag, IgnoreForTranslationMarkup.DeeplIgnoreEndTag)
-                            .Replace(markup.CustomBeginTag, IgnoreForTranslationMarkup.DeeplIgnoreBeginTag),
+                            .Replace(markup.EndTag, IgnoreForTranslationMarkup.DeeplIgnoreEndTag)
+                            .Replace(markup.BeginTag, IgnoreForTranslationMarkup.DeeplIgnoreBeginTag),
                         () => tp.Text);
 
                     queryParamBuilder.WithQueryParameter("text", textToSend);

@@ -26,7 +26,7 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Services.Implementation
             if (!response.WasSuccess)
             {
                 var msg = $"The Deepl API returned with code {response.StatusCode} and message '{response.ReturnMessage}'.";
-                throw new DeeplTranslationException(msg);
+                throw new DeeplApiException(msg);
             }
 
             var result = _resultAdapter.Adapt(request, response.Content);
