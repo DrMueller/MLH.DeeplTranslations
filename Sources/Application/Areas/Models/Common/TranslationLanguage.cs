@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Mmu.Mlh.LanguageExtensions.Areas.Invariance;
 
@@ -20,6 +21,7 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Models.Common
                 Spanish
             });
 
+        [SuppressMessage("ReSharper", "ReturnTypeCanBeEnumerable.Global", Justification = "Indicates inmemory list")]
         public static IReadOnlyCollection<TranslationLanguage> All => _lazyAll.Value;
 
         public static TranslationLanguage Dutch { get; } = new TranslationLanguage("NL", "Dutch");
@@ -32,6 +34,8 @@ namespace Mmu.Mlh.DeeplTranslations.Areas.Models.Common
         public static TranslationLanguage Spanish { get; } = new TranslationLanguage("ES", "Spanish");
 
         public string Code { get; }
+
+        [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global", Justification = "Easier for clients")]
         public string Description { get; }
 
         private TranslationLanguage(string code, string description)
