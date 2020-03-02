@@ -8,7 +8,7 @@
     <Company>DrMuellerDrMueller</Company>
     <Product>MyLittleHelpers.DeeplProxy</Product>
     <Description>DrMuellers little translations with the Deepl API</Description>
-    <PackageIconUrl>https://raw.githubusercontent.com/DrMueller/MLH.DeeplProxy/master/Sources/Application/Infrastructure/Assets/M.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/DrMueller/MLH.DeeplTranslations/master/Sources/Application/Infrastructure/Assets/M.png</PackageIconUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <AssemblyVersion Condition="'$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</AssemblyVersion>
     <FileVersion Condition="'$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</FileVersion>
